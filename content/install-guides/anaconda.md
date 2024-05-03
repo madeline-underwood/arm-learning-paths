@@ -28,7 +28,7 @@ It includes access to a repository with over 8,000 open-source data science and 
 
 The `conda` command can be used to quickly install and use Python packages. 
 
-Follow the instructions below to install and use Anaconda Distribution on an Arm server.
+Follow the instructions below to complete an Anaconda Distribution download and install it on an Arm server.
 
 ## Before you begin
 
@@ -84,9 +84,9 @@ sh ./Anaconda3-2023.09-0-Linux-aarch64.sh -b
 
 The install will take a couple of minutes to complete.
 
-The batch installation will not setup the shell. 
+The batch installation will not set up the shell. 
 
-To setup the shell run.
+To set up the shell run:
 
 ```bash
 eval "$($HOME/anaconda3/bin/conda shell.bash hook)"
