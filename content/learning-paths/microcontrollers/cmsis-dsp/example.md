@@ -58,7 +58,7 @@ From the `Select Target` pulldown, highlight the `ARMCM55_FP_MVE` target (build 
 Repeat the steps above to run on the Cortex-M55 FVP, and note the number of instructions executed, which should be a dramatic improvement over Cortex-M3.
 
 {{% notice  Note%}}
-The FVPs are instruction accurate but not cycle accurate.
+The FVPs are instruction-accurate but not cycle-accurate.
 
 The instruction count is used here to illustrate relative performance to a high granularity.
 {{% /notice %}}
