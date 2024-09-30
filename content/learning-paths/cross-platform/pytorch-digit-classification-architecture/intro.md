@@ -111,7 +111,7 @@ To ensure everything is set up correctly:
 3. Save the file as `pytorch-digits.ipynb`.
 4. Select the Python kernel you created earlier (pytorch-env). To do so, click Kernels in the top right corner. Then, click Jupyter Kernel..., and you will see the Python kernel as shown below:
 
-![img1](Figures/01.png)
+![img1](Figures/1.png)
 
 5. In your Jupyter notebook, run the following code to verify PyTorch is working correctly:
 
@@ -121,6 +121,6 @@ print(torch.__version__)
 ```
 
 It will look as follows:
-![img2](Figures/02.png)
+![img2](Figures/2.png)
 
 With your development environment created you can proceed to creating a PyTorch model.
