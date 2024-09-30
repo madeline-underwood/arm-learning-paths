@@ -2,7 +2,7 @@
 # User change
 title: "Inference"
 
-weight: 4
+weight: 6
 
 layout: "learningpathall"
 ---
