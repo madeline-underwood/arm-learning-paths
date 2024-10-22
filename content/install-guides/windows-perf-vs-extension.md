@@ -27,9 +27,9 @@ layout: installtoolsall # DO NOT MODIFY. Always true for tool install articles
 
 ## Introduction
 
-WindowsPerf is a lightweight performance profiling tool inspired by Linux Perf, and specifically tailored for Windows on Arm. It leverages the ARM64 PMU (Performance Monitor Unit) and its hardware counters to offer precise profiling capabilities. 
+WindowsPerf is a lightweight performance profiling tool inspired by Linux Perf, and specifically tailored for Windows on Arm. It leverages the Arm AArch64 Performance Monitoring Unit (PMU) and its hardware counters to offer precise profiling capabilities. 
 
-Recognizing the complexities of command-line interaction, the WindowsPerf GUI is a Visual Studio 2022 extension created to provide a more intuitive, integrated experience within the integrated development environment (IDE). This tool enables developers to interact with WindowsPerf, adjust settings, and visualize performance data seamlessly in Visual Studio.
+Recognizing the complexities of command-line interaction, the WindowsPerf GUI is a Visual Studio 2022 extension created to provide a more intuitive, integrated experience within the Integrated Development Environment (IDE). This tool enables developers to interact with WindowsPerf, adjust settings, and visualize performance data seamlessly in Visual Studio.
 
 ## A Glimpse of the available features
 
