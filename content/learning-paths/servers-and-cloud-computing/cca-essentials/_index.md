@@ -7,7 +7,7 @@ who_is_this_for: This is an advanced topic for software developers who want to s
 
 learning_objectives:
      - Understand how attestation is used with Arm's Confidential Computing Architecture (CCA).
-     - Deploy a simple workload in a CCA realm on an Armv-A AEM Base FVP (Fixed Virtual Platform) with support for RME extensions. 
+     - Deploy a simple workload in a CCA realm on an Armv-A AEM Base FVP (Fixed Virtual Platform) that has support for RME extensions. 
      - Connect the workload with additional software services to create an end-to-end example for using attestation to unlock the confidential processing of data.
 
 prerequisites:
