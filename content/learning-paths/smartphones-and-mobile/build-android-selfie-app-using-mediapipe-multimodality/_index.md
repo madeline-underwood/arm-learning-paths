@@ -1,15 +1,13 @@
 ---
-title: Build a Hands-Free Selfie app with Modern Android Development and MediaPipe Multimodal AI
-draft: true
-cascade:
-    draft: true
+title: Build a Hands-Free Selfie application with MAD and MediaPipe
+
 minutes_to_complete: 120
 
-who_is_this_for: This is an introductory topic for mobile application developers interested in learning how to build an Android selfie app with MediaPipe, Kotlin flows and CameraX, following the modern Android architecture design.
+who_is_this_for: This is an introductory topic for mobile application developers interested in learning how to build an Android selfie app with Modern MediaPipe Multimodal AI, Kotlin flows, and CameraX, following the Modern Android Development (MAD) architecture design.
 
 
 learning_objectives: 
-    - Architect a modern Android app with a focus on the UI layer.
+    - Architect a modern Android app focusing on the UI layer.
     - Leverage lifecycle-aware components within the MVVM architecture.
     - Combine MediaPipe's face landmark detection and gesture recognition for a multimodel selfie solution.
     - Use JetPack CameraX to access camera features.
@@ -17,10 +15,10 @@ learning_objectives:
 
 prerequisites:
     - A development machine compatible with [**Android Studio**](https://developer.android.com/studio).
-    - A recent **physical** Android device (with **front camera**) and a USB **data** cable.
+    - An Android device with front camera and a USB data cable.
     - Familiarity with Android development concepts.
     - Basic knowledge of modern Android architecture.
-    - Basic knowledge of Kotlin programming language, such as [coroutines](https://kotlinlang.org/docs/coroutines-overview.html) and [flows](https://kotlinlang.org/docs/flow.html).
+    - Basic knowledge of Kotlin programming language, such as [Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) and [Kotlin Flows](https://kotlinlang.org/docs/flow.html).
 
 author_primary: Han Yin
 
@@ -28,9 +26,9 @@ author_primary: Han Yin
 skilllevels: Beginner
 subjects: ML
 armips:
-    - ARM Cortex-A
-    - ARM Cortex-X
-    - ARM Mali GPU
+    - Arm Cortex-A
+    - Arm Cortex-X
+    - Arm Mali GPU
 tools_software_languages:
     - mobile
     - Android Studio
