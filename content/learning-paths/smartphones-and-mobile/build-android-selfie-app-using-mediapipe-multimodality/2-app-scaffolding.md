@@ -6,30 +6,30 @@ weight: 2
 layout: learningpathall
 ---
 
-This learning path will teach you to architect an app following [modern Android architecture](https://developer.android.com/courses/pathways/android-architecture) design with a focus on the [UI layer](https://developer.android.com/topic/architecture/ui-layer).
+This Learning Path will teach you to architect an app following [modern Android architecture](https://developer.android.com/courses/pathways/android-architecture) design focusing on the [UI layer](https://developer.android.com/topic/architecture/ui-layer).
 
 ## Development environment setup
 
 Download and install the latest version of [Android Studio](https://developer.android.com/studio/) on your host machine.
 
-This learning path's instructions and screenshots are taken on macOS with Apple Silicon, but you may choose any of the supported hardware systems as described [here](https://developer.android.com/studio/install).
+This Learning Path's instructions and screenshots are taken on macOS, but you can choose any of the supported hardware systems as described in [Install Android Studio](https://developer.android.com/studio/install) on the Android Developer website.
 
-Upon first installation, open Android Studio and proceed with the default or recommended settings. Accept license agreements and let Android Studio download all the required assets.
+After installation, open Android Studio and proceed with the default or recommended settings. Accept license agreements and download all the required assets.
 
 Before you proceed to coding, here are some tips that might come handy:
 
 {{% notice Tip %}}
-1. To navigate to a file, simply double-tap `Shift` key and input the file name, then select the correct result using `Up` & `Down` arrow keys and then tap `Enter`.
+1. To navigate to a file, simply double-tap the Shift key and input the file name, then select the correct result using the up and down arrow keys and then press Enter.
 
-2. Every time after you copy-paste a code block from this learning path, make sure you **import the correct classes** and resolved the errors. Refer to [this doc](https://www.jetbrains.com/help/idea/creating-and-optimizing-imports.html) to learn more.
+2. Every time after you copy-and-paste a code block from this Learning Path, ensure that you import the correct classes and resolve the errors. Refer to [the Auto import web page](https://www.jetbrains.com/help/idea/creating-and-optimizing-imports.html) on the JetBrains website to learn more.
 {{% /notice %}}
 
 ## Create a new Android project
 
-1. Navigate to **File > New > New Project...**.
+1. Navigate to **File** > **New** > **New Project**.
 
-2. Select **Empty Views Activity** in **Phone and Tablet** galary as shown below, then click **Next**.
-![Empty Views Activity](images/2/empty%20project.png)
+2. Select **Empty Views Activity** in **Phone and Tablet** gallery as shown in Figure 1, then select **Next**.
+![Empty Views Activity.png alt-text#center](images/2/empty%20project.png "Figure 1: Empty Views Activity.")
 
 3. Proceed with a cool project name and default configurations as shown below. Make sure that **Language** is set to **Kotlin**, and that **Build configuration language** is set to **Kotlin DSL**.
 ![Project configuration](images/2/project%20config.png)
