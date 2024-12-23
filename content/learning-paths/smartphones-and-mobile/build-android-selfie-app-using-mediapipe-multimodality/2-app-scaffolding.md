@@ -5,57 +5,54 @@ weight: 2
 ### FIXED, DO NOT MODIFY
 layout: learningpathall
 ---
-
-This Learning Path will teach you to architect an app following [modern Android architecture](https://developer.android.com/courses/pathways/android-architecture) design focusing on the [UI layer](https://developer.android.com/topic/architecture/ui-layer).
-
 ## Development environment setup
 
 Download and install the latest version of [Android Studio](https://developer.android.com/studio/) on your host machine.
 
-This Learning Path's instructions and screenshots are taken on macOS, but you can choose any of the supported hardware systems as described in [Install Android Studio](https://developer.android.com/studio/install) on the Android Developer website.
+This Learning Path's instructions and screenshots are taken on macOS, but you can use any of the supported hardware systems as described in [Install Android Studio](https://developer.android.com/studio/install) on the Android Developer website.
 
 After installation, open Android Studio and proceed with the default or recommended settings. Accept license agreements and download all the required assets.
 
 Before you proceed to coding, here are some tips that might come handy:
 
 {{% notice Tip %}}
-1. To navigate to a file, simply double-tap the Shift key and input the file name, then select the correct result using the up and down arrow keys and then press Enter.
+1. To navigate to a file, simply press the Shift key twice, input the file name, select the correct result using the up and down arrow keys, and then press Enter.
 
-2. Every time after you copy-and-paste a code block from this Learning Path, ensure that you import the correct classes and resolve the errors. Refer to [the Auto import web page](https://www.jetbrains.com/help/idea/creating-and-optimizing-imports.html) on the JetBrains website to learn more.
+2. Every time after you copy-and-paste a code block from this Learning Path, ensure that you import the correct classes and resolve the errors. For more information, see the [Auto import](https://www.jetbrains.com/help/idea/creating-and-optimizing-imports.html) web page.
 {{% /notice %}}
 
 ## Create a new Android project
 
 1. Navigate to **File** > **New** > **New Project**.
 
-2. Select **Empty Views Activity** in **Phone and Tablet** gallery as shown in Figure 1, then select **Next**.
+2. Select **Empty Views Activity** in **Phone and Tablet** gallery as Figure 1 shows, then select **Next**.
 ![Empty Views Activity.png alt-text#center](images/2/empty%20project.png "Figure 1: Empty Views Activity.")
 
-3. Proceed with a cool project name and default configurations as shown below. Make sure that **Language** is set to **Kotlin**, and that **Build configuration language** is set to **Kotlin DSL**.
-![Project configuration](images/2/project%20config.png)
+3. Choose a project name and select the default configurations as Figure 2 shows. Make sure that **Language** is set to **Kotlin**, and **Build configuration language** is set to **Kotlin DSL**.
+![Project configuration.png alt-text#center](images/2/project%20config.png "Figure 2: Project Configuration.")
 
 ### Introduce CameraX dependencies
 
-[CameraX](https://developer.android.com/media/camera/camerax) is a Jetpack library, built to help make camera app development easier. It provides a consistent, easy-to-use API that works across the vast majority of Android devices with a great backward-compatibility.
+[CameraX](https://developer.android.com/media/camera/camerax) is a Jetpack library, built to help make camera app development easier. It provides a consistent, easy-to-use API that works across the vast majority of Android devices with great backward-compatibility.
 
-1. Wait for Android Studio to sync project with Gradle files, this make take up to several minutes.
+1. Wait for Android Studio to sync project with Gradle files, this might take several minutes.
 
-2. Once project is synced, navigate to `libs.versions.toml` in your project's root directory as shown below. This file serves as the version catalog for all dependencies used in the project.
+2. Once project is synced, navigate to `libs.versions.toml` in your project's root directory as Figure 3 shows. This file serves as the version catalog for all dependencies used in the project.
 
-![version catalog](images/2/dependency%20version%20catalog.png)
+![Version Catalog.png alt-text#center](images/2/dependency%20version%20catalog.png "Figure 3: Version Catalog.")
 
 {{% notice Info %}}
 
-For more information on version catalogs, please refer to [this doc](https://developer.android.com/build/migrate-to-catalogs).
+For more information on version catalogs, please refer to [Migrate your build to version catalogs](https://developer.android.com/build/migrate-to-catalogs).
 
 {{% /notice %}}
 
-3. Append the following line to the end of `[versions]` section. This defines the version of CameraX libraries we will be using.
+3. Append the following line to the end of the `[versions]` section. This defines the version of CameraX libraries that you will be using.
 ```toml
 camerax = "1.4.0"
 ```
 
-4. Append the following lines to the end of `[libraries]` section. This declares the group, name and version of CameraX dependencies.
+4. Append the following lines to the end of the `[libraries]` section. This declares the group, name and version of CameraX dependencies.
 
 ```toml
 camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "camerax" }
@@ -64,7 +61,7 @@ camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", versi
 camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
 ```
 
-5. Navigate to `build.gradle.kts` in your project's `app` directory, then insert the following lines into `dependencies` block. This introduces the above dependencies into the `app` subproject.
+5. Navigate to `build.gradle.kts` in your project's `app` directory, then insert the following lines into the `dependencies` block. This introduces the dependencies listed above into the `app` subproject.
 
 ```kotlin
     implementation(libs.camera.core)
@@ -75,7 +72,7 @@ camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "
 
 ## Enable view binding
 
-1. Within the above `build.gradle.kts` file, append the following lines to the end of `android` block to enable view binding feature.
+1. Within the above `build.gradle.kts` file, append the following lines to the end of the `android` block to enable the view binding feature.
 
 ```kotlin
     buildFeatures {
@@ -83,13 +80,13 @@ camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "
     }
 ```
 
-2. You should be seeing a notification shows up, as shown below. Click **"Sync Now"** to sync your project.
+2. You should be see a notification, as Figure 4 shows. Click **"Sync Now"** to sync your project.
 
-![Gradle sync](images/2/gradle%20sync.png)
+![Gradle sync.png alt-text#center](images/2/gradle%20sync.png "Figure 4: Gradle Sync.")
 
 {{% notice Tip %}}
 
-You may also click the __"Sync Project with Gradle Files"__ button in the toolbar or pressing the corresponding shorcut to start a sync.
+You can also click on the __"Sync Project with Gradle Files"__ button in the toolbar, or press the corresponding shortcut to start a sync.
 
 ![Sync Project with Gradle Files](images/2/sync%20project%20with%20gradle%20files.png)
 {{% /notice %}}
