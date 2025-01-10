@@ -1,20 +1,20 @@
 ---
-title: Use Arm Performance Libraries to improve performance
+title: Deploy Arm Performance Libraries
 weight: 4
 
 ### FIXED, DO NOT MODIFY
 layout: learningpathall
 ---
 
-## Introducing Arm Performance Libraries
+## Improve Performance with Arm Performance Libraries
 
 In the previous section, you gained some understanding of the performance of the first calculation option, multithreading. 
 
-Now, use option 2, Arm Performance Libraries, and explore the differences.
+Now you can try the second option, Arm Performance Libraries, and explore the differences.
 
 [Arm Performance Libraries](https://developer.arm.com/Tools%20and%20Software/Arm%20Performance%20Libraries) provides optimized standard core math libraries for numerical applications on 64-bit Arm-based processors. The libraries are built with OpenMP across many BLAS, LAPACK, FFT, and sparse routines in order to maximize your performance in multi-processor environments.
 
-Use the [Arm Performance Libraries install guide](/install-guides/armpl/) to install Arm Performance Libraries on Windows 11. 
+Use the [Arm Performance Libraries Install Guide](/install-guides/armpl/) to install Arm Performance Libraries on Windows 11. 
 
 You can also refer to the [Arm Performance Libraries documentation](https://developer.arm.com/documentation/109361/latest/) for Windows. 
 
@@ -26,7 +26,7 @@ Take note of the location of these two directories, as you will need them for co
 
  ![img9](./figures/apl_directory.png)
 
-## Include Arm Performance Libraries into Visual Studio
+## Add Paths to Arm Performance Libraries in Visual Studio
 
 To use Arm Performance Libraries in the application, you need to manually add the paths into Visual Studio.
 

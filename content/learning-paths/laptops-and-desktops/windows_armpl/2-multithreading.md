@@ -23,12 +23,12 @@ git clone https://github.com/odincodeshen/SpinTheCubeInGDI.git
 ```
 
 {{% notice Note %}}
-The example repository is forked from the [original GitHub repository](https://github.com/marcpems/SpinTheCubeInGDI) and some minor modifications have been made to aid learning.
+The example repository is forked from the [original GitHub repository](https://github.com/marcpems/SpinTheCubeInGDI) and some minor modifications have been made for demonstration purposes.
 {{% /notice %}}
 
 ## Spin the cube introduction
 
-In Windows File Explorer, double-click `SpinTheCubeInGDI.sln` to open the project in Visual Studio.
+In Windows File Explorer, double-click **SpinTheCubeInGDI.sln** to open the project in Visual Studio.
 
 The source file `SpinTheCubeInGDI.cpp` implements a spinning cube.
 
