@@ -13,13 +13,13 @@ review:
 
     - questions:
         question: >
-            Arm Performance Libraries has been integrated into Microsoft Visual Studio installation.
+            Arm Performance Libraries has been integrated into the Microsoft Visual Studio installation package.
         answers:
             - "Yes"
             - "No"
         correct_answer: 2                   
         explanation: >
-            No, you need install Arm Performance Libraries package before using it.
+            No, you need install Arm Performance Libraries package separately to the Microsoft Visual Studio package.
     - questions:
         question: >
             Arm Performance Libraries provides which type of code optimization?  
