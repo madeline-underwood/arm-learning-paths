@@ -55,8 +55,8 @@ Use active voice. Active voice is direct. The reader knows what the subject and 
 **Passive voice:** The MMU page table is built by software in external memory.
 
 {{% notice Examples%}}
-Passive voice (bad):
-- We will be focusing on three versions of HPCG.
+Passive voice:
+- Three versions of HPCG will be focussed on.
 
 Recommended:
 - We focus on three versions of HPCG.
@@ -67,7 +67,12 @@ Recommended:
 
 ## Use present tense
 
-Use present tense because it is concrete. It emphasizes what the user can do now. And it uses fewer words. 
+Use the present tense, for the following reasons:
+
+* It offers clarity.
+* It is easier to read.
+* It is avoids confusion about when a fact applies, and creates a sense of timelessness.
+* It makes step-by-step instructions more immediate and actionable. 
 
 {{% notice Examples%}}
 Not recommended:
@@ -119,7 +124,7 @@ Sometimes, text should not be hyperlinked. For example, when you want the reader
 &nbsp;  
 &nbsp;  
 
-## Use second person point of view
+## Use the second person
 
 Use second person to refer to your reader, and when writing user-oriented instructions. Second person uses, or implies, the pronoun you, and addresses your reader directly. 
 
@@ -129,14 +134,14 @@ If you have trouble starting a sentence, try starting with: **You can**
 
 {{% notice Examples%}}
 Too passive:
-- An architecture can be thought of like a contract between the hardware and the software. 
+- An architecture can be thought of as a contract between the hardware and the software. 
 
 Recommended:
-- You can think of the architecture like a contract between the hardware and the software.  
-- Think of an architecture like a contract between the hardware and the software.  
+- You can think of the architecture as a contract between the hardware and the software.  
+- Think of an architecture as a contract between the hardware and the software.  
 {{% /notice %}}
 
-When writing user-oriented instructions or guidance, using you makes it clear that your reader, and not the item in discussion, is the agent who performs the action. In the following recommended example, it is clear that your reader is the agent using the flag to do the tracking, and that the flag is not doing the tracking automatically. 
+When writing user-oriented instructions or guidance, using *you* makes it clear that your reader, and not the item in discussion, is the agent who performs the action. In the following recommended example, it is clear that your reader is the agent using the flag to do the tracking, and that the flag is not doing the tracking automatically. 
 
 {{% notice Examples%}}
 Too passive:
@@ -168,7 +173,7 @@ Recommended:
 
 ## Be specific
 
-Use numbers and provide examples when possible. Avoid general statements try to be as specific.
+Use numbers and provide examples when possible. Avoid general statements and try to be as specific.
 
 {{% notice Examples%}}
 Too nebulous:
