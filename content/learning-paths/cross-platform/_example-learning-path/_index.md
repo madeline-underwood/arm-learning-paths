@@ -1,11 +1,11 @@
 ---
 title: Write a Learning Path
 
-description: Learn how to create, format, and structure content to write your own Learning Path.
+description: Learn how to write, format, and structure content to create your own Learning Path.
 
 minutes_to_complete: 60
 
-who_is_this_for: This topic is for content creators and software developers who want to share Arm related information as a step-by-step guide called a Learning Path.
+who_is_this_for: This guidance is for anyone in the developer community who wants to share learning resources Arm related information as a step-by-step guide called a Learning Path.
 
 learning_objectives: 
     - Understand what type of content belongs in a Learning Path.
@@ -16,7 +16,7 @@ learning_objectives:
 prerequisites:
     - A [GitHub](https://github.com/) account
 
-author: Zach Lasiuk
+author: Zach Lasiuk, Maddy Underwood
 
 ### Tags
 skilllevels: Introductory
