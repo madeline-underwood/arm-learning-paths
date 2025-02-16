@@ -1,7 +1,7 @@
 ---
-title: Create a new Learning Path
+title: Write a Learning Path
 
-description: Learn what type of content belongs in a Learning Path and how to format it.
+description: Learn how to create, format, and structure content to write your own Learning Path.
 
 minutes_to_complete: 60
 
@@ -9,9 +9,9 @@ who_is_this_for: This topic is for content creators and software developers who 
 
 learning_objectives: 
     - Understand what type of content belongs in a Learning Path.
-    - Set up the required tools for Learning Path creation.
+    - Effectively structure your content. 
     - Write and format your own Learning Path using markdown.
-    - Contribute your Learning Path for publication.
+    - Raise a Pull Request to contribute your Learning Path to the project.
 
 prerequisites:
     - A [GitHub](https://github.com/) account
