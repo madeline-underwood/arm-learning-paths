@@ -63,14 +63,10 @@ Optionally, if you would like to add your new Learning Path content to the autom
 
 ## Publishing
 
-After submitting a pull request, automated checks will run to validate your metadata format and the Learning Path team will start reviewing your submission. This is done for technical accuracy and to review writing style. Watch the pull request for review comments and respond as needed. Once the pull request is merged, the website is automatically updated with the new contribution. 
+After submitting a pull request, automated checks will run to validate your metadata format and the Learning Path team will start reviewing your submission. This is done for technical accuracy and to review writing style. Watch the pull request for review comments and respond as needed. Once the pull request is merged into the main repository, it will be ready to appear live on the website on the next production update. 
 
 {{% notice Note 1 %}}
-If there are small typos or formatting issues, we will fix them before publishing. This is done to reduce the amount of back-and-forth overhead on small issues; you will always be able to view all changes through GitHub and let us know if you object to any changes.
-{{% /notice %}}
-
-{{% notice Note 2 %}}
-If there are large factual or reproducibility errors in your contribution, we will contact you via the pull request to resolve them before publishing.
+The Learning Path team review all content before publishing, and might make changes. You can offer feedback on any of these these revisions through GitHub. If there are large factual or reproducibility errors in your contribution, we will contact you via the pull request to resolve them before publishing.
 {{% /notice %}}
 
 ## Updating Learning Paths
