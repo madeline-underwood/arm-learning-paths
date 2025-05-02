@@ -5,11 +5,11 @@ description: Learn how to use each of the tools supplied with Arm Performance St
 
 minutes_to_complete: 60
 
-who_is_this_for: Android application and games developers new to Arm Performance Studio.
+who_is_this_for: This is an introductory topic for Android app and game developers who are new to Arm Performance Studio.
 
 learning_objectives:
-    - Learn the basic features of each component of Arm Performance Studio. 
-    - Get started profiling and optimizing your application.
+    - Understand the core features of Arm Performance Studio. 
+    - Begin profiling and optimizing your Android application.
 
 prerequisites:
     - An Android device.
@@ -17,7 +17,7 @@ prerequisites:
     - For OpenGL ES applications, your device must be running Android 10 or later.
     - For Vulkan applications, your device must be running Android 9 or later.
     - A debuggable build of your application. 
-    - Arm Performance Studio installed. Follow the [Arm Performance Studio install guide](/install-guides/ams) for instructions.
+    - Arm Performance Studio must be installed. Follow the [Arm Performance Studio install guide](/install-guides/ams).
     - Android SDK Platform tools installed. Required for the Android Debug bridge (adb).
 
 author: Ronan Synnott
@@ -34,8 +34,7 @@ operatingsystems:
 tools_software_languages:
     - Arm Performance Studio
     - Arm Mobile Studio
-    - Coding
-
+    
 further_reading:
     - resource:
         title: Get started with Streamline Tutorial

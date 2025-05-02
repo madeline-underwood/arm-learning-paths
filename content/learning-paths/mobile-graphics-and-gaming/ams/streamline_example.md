@@ -7,7 +7,7 @@ weight: 4 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
-This learning path explores Streamline for Android application profiling on a mobile device. For other use cases, refer to the supporting materials for [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio).
+This Learning Path explores Streamline for Android application profiling on a mobile device. For other use cases, refer to the supporting materials for [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio).
 
 ## Example Streamline report
 

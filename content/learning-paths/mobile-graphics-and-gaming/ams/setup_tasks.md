@@ -9,7 +9,7 @@ layout: "learningpathall"
 ---
 ## Installation
 
-1. Install Arm Performance Studio by following the instructions in the [Arm Performance Studio install guide](/install-guides/ams). Details about changes since the last release can be found in the [Release Note](https://developer.arm.com/documentation/107649/latest/).
+1. Install Arm Performance Studio by following the instructions in the [Arm Performance Studio install guide](/install-guides/ams). For changes since the last release, see the [Release Note](https://developer.arm.com/documentation/107649/latest/).
 1. Ensure you have installed [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb). `adb` is available with the Android SDK platform tools, which are installed as part of Android Studio. Alternatively, you can download them separately as part of the Android SDK platform tools.
 1. Performance Advisor uses a Python script to connect to your device. To run this script, you will need [Python](https://www.python.org/downloads/) 3.8 or later installed.
 
@@ -24,7 +24,7 @@ On macOS, edit your `/etc/paths` file to add the following paths:
 /<installation_directory>/mali_offline_compiler
 ```
 
-On Linux, edit your `PATH` environment variable to add the paths to the Performance Advisor executable. Add this command to the `.bashrc` file in your home directory, so that this environment variable is set whenever you initialize a shell session.
+On Linux, edit your `PATH` environment variable to add the paths to the Performance Advisor executable. Add these files to your `.bashrc` file to make the tools available in every terminal session.
 
  ```
  PATH=$PATH:/<installation_directory>/streamline
@@ -49,7 +49,7 @@ To assist with readability and add context, you can optionally include [annotati
 1. On the device, ensure that [Developer Mode](https://developer.android.com/studio/debug/dev-options) is enabled.
 1. Enable `USB Debugging` under `Settings > Developer options`. If your device asks you to authorize connection to your computer, confirm the connection.
 1. Connect the device to the host through USB and approve the debug connection on the device when prompted.
-1. To test the connection, run the `adb devices` command in a command terminal. If successful, this returns the ID of your device:
+1. To test the connection, run the `adb devices` command in a terminal. If successful, this returns the ID of your device:
 
     ```command
     adb devices
@@ -59,4 +59,4 @@ To assist with readability and add context, you can optionally include [annotati
 
     If you see that the device is listed as `unauthorized`, try disabling and re-enabling `USB Debugging` on the device, and accept the authorization prompt to enable connection to the computer.
 
-1. Install the [debuggable](https://developer.android.com/studio/debug) application on the device.
+1. Install the [debuggable](https://developer.android.com/studio/debug) version of your application on the device.
