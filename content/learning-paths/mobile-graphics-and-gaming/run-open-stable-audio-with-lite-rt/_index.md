@@ -1,9 +1,9 @@
 ---
-title: Generate audio with Open Stable Audio using LiteRT runtime
+title: Generate audio with Stable Audio Open Small on LiteRT
 
 minutes_to_complete: 30
 
-who_is_this_for: This is an introductory topic on how to convert the  text-to-audio model Open Stable Audio to LiteRT (Lite Runtime) and deploying it on an Android device.
+who_is_this_for: This is an introductory topic for developers looking to deploy Stability AI's Open Stable Audio text-to-audio model on LiteRT (Lite Runtime) using an Android device.
 
 learning_objectives:
     - Convert Open Stable Audio to LiteRT
