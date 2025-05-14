@@ -8,14 +8,15 @@ layout: learningpathall
 
 ## Create and build a simple program
 
-We now set up a simple program to run the inference on all three submodules on an Android device, this will take in a text prompt and generate an audio file.
-You can clone the needed sample files as follows:
+You'll now build a simple program that runs inference on all three submodules directly on an Android device. 
+
+The program takes a text prompt as input and generates an audio file as output.
 ```bash
 cd $WORKSPACE/audio-stale-open-litert/app
 mkdir build && cd build
 ```
 
-Create flatbuffers directory and build
+Build the FlatBuffers tools (used by TensorFlow Lite):
 ```console
 mkdir flatc-native-build && cd flatc-native-build
 cmake ../tensorflow/lite/tools/cmake/native_tools/flatbuffers
@@ -33,28 +34,31 @@ cmake -B build -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain
 cmake --build build
 ```
 
-Once the SAO example built sucessfully, this is a binary file named audiogen_main has been created, we will use adb (Android Debug Bridge) to push the needed example to the device:
+After the SAO example builds successfully, a binary file named `audiogen_main` is created. 
+
+Now use adb (Android Debug Bridge) to push the necessary files to the device:
 
 ```bash
 adb shell
 ```
 
-Create a directory for all neded resources:
+Create a directory for all the required resources:
 ```bash
 cd /data/local/tmp
 mkdir audiogen
 ```
-Push all necessary files into newly created audiogen folder on Android.
+Push all necessary files into the `audiogen` folder on Android:
 ```bash
 cd sao_litert
 adb push runner/build/audiogen_main /data/local/tmp/audiogen
 adb push dit.tflite /data/local/tmp/audiogen
 adb push autoencoder_model.tflite /data/local/tmp/audiogen
 adb push conditioners_tflite/conditioners_float32.tflite /data/local/tmp/audiogen
+```
+
+Finally, run the program on your Android device:
+
 ```bash
-
-Go into the shell again to run the simple program:
-```adb shell
-
+adb shell
 ```
 
