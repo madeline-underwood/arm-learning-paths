@@ -6,30 +6,32 @@ weight: 2
 layout: learningpathall
 ---
 
-This section introduces the related topics that make out the basis for this learning path. Review it before proceeding to the step-by-step tutorial.
+This section introduces the related topics that form the basis for this Learning Path. 
 
 # Edge AI
-Edge AI refers to artificial intelligence models that run directly on edge devices, processing data locally rather than relying on cloud computing. These models are optimized for real-time decision-making on resource-constrained devices, such as microcontrollers, embedded systems, and IoT sensors.
+Edge AI refers to artificial intelligence models that run directly on edge devices, processing data locally rather than on the cloud. These models are optimized for real-time decision-making on resource-constrained devices, such as microcontrollers, embedded systems, and IoT sensors.
 
-**TinyML (Tiny Machine Learning)** is a subset of Edge AI that focuses specifically on deploying machine learning models on ultra-low-power microcontrollers and resource-constrained devices. These microcontrollers typically have limited computational resources — often less than 1 MB of flash memory and only a few hundred kilobytes of RAM — and are designed to run on minimal power, sometimes for years on a single coin-cell battery. Despite these constraints, TinyML enables such devices to perform on-device inference, allowing them to make intelligent decisions in real time without needing to send data to the cloud. This opens the door for smart functionality in low-cost, battery-powered devices used in applications such as environmental monitoring, wearables, smart homes, industrial sensors, and more.
+**TinyML (Tiny Machine Learning)** is a subset of Edge AI that focuses specifically on deploying machine learning models on ultra-low-power microcontrollers and resource-constrained devices. These microcontrollers typically have limited computational resources, which is often less than 1 MB of flash memory and only a few hundred kilobytes of RAM, and are designed to run on minimal power - sometimes for years on a single coin-cell battery. 
+
+Despite these constraints, TinyML enables such devices to perform on-device inference, allowing them to make intelligent decisions in real time without relying on resources in the cloud. This creates opportunities for smart functionality in low-cost, battery-powered devices used in applications such as environmental monitoring, wearables, smart homes, and industrial sensors.
 
 ## Key Characteristics of Edge AI and TinyML
 
-Key features of Edge AI and TinyML include;
+Key features of Edge AI and TinyML include:
 
-- **Low Power Consumption**: Designed to run on batteries or harvested energy for months or years.
+- **Low Power Consumption**: Edge AI and TinyML devices are designed to run on batteries or harvested energy for months or years.
 
-- **Small Model Size**: Models are optimized (e.g., quantized or pruned) to fit into a few kilobytes or megabytes.
+- **Small Model Size**: the models are optimized (for example, quantized or pruned) to fit into a few kilobytes or megabytes.
 
-- **Limited Compute & Memory** : Typically operates with <1MB RAM and very limited storage.
+- **Limited Compute & Memory**: Typically operates with <1MB RAM and very limited storage.
 
-- **Real-Time Inference** : Enables immediate local decision-making (e.g., wake-word detection).
+- **Real-Time Inference**: Enables immediate local decision-making (e.g., wake-word detection).
 
-- **Low Latency** : No reliance on cloud – inference is performed on-device.
+- **Low Latency**: No reliance on cloud – inference is performed on-device.
 
-- **Applications** : Often used in audio classification, gesture detection, anomaly detection, etc.
+- **Applications**: Often used in audio classification, gesture detection, anomaly detection, etc.
 
-- **Example Devices** : Arduino Nano 33 BLE Sense, STM32 MCUs, Raspberry Pi Pico, Arduino Nano RP2040 Connect, and more.
+- **Example Devices**: Arduino Nano 33 BLE Sense, STM32 MCUs, Raspberry Pi Pico, and Arduino Nano RP2040 Connect.
 
 ## Running AI Models on Resource-Constrained Devices
 

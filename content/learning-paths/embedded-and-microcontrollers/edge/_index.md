@@ -1,13 +1,9 @@
 ---
 title: Learn How to Run AI on Edge Devices- Arduino Nano RP2040
 
-draft: true
-cascade:
-    draft: true
-
 minutes_to_complete: 90
 
-who_is_this_for: This learning path is for beginners in Edge AI and TinyML, including developers, engineers, hobbyists, AI/ML enthusiasts, and researchers working with embedded AI and IoT.
+who_is_this_for: This is an introductory topic for beginners in Edge AI and TinyML, including developers, engineers, hobbyists, AI/ML enthusiasts, and researchers working with embedded AI and IoT.
 
 learning_objectives:
     - Understand Edge AI and TinyML basics.

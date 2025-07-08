@@ -7,7 +7,7 @@ layout: learningpathall
 ---
 # Using Edge Impulse to Train TinyML Models
 
-Now that the foundational concepts of TinyML and Edge AI are clear, it's time to move from theory to practice. **Edge Impulse** is an easy to use platform for training TinyML models. It provides an end-to-end pipeline for collecting data, designing features, training models, and deploying them to edge devices. In this section, you will explore how Edge Impulse is used to train models specifically for ultra-low-power microcontrollers, bridging the gap between machine learning and real-world embedded applications.
+Now that the foundational concepts of TinyML and Edge AI are clear, it's time to move from theory to practice. Edge Impulse is an easy to use platform for training TinyML models. It provides an end-to-end pipeline for collecting data, designing features, training models, and deploying them to edge devices. In this section, you'll explore how Edge Impulse is used to train models specifically for ultra-low-power microcontrollers, bridging the gap between machine learning and real-world embedded applications.
 
 ## What is Edge Impulse?
 
