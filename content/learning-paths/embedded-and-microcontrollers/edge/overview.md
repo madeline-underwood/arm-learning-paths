@@ -6,14 +6,14 @@ weight: 2
 layout: learningpathall
 ---
 
-This section introduces the related topics that form the basis for this Learning Path. 
+This section introduces the key topics you'll explore throughout this Learning Path. 
 
 # Edge AI
-Edge AI refers to artificial intelligence models that run directly on edge devices, processing data locally rather than on the cloud. These models are optimized for real-time decision-making on resource-constrained devices, such as microcontrollers, embedded systems, and IoT sensors.
+Edge AI refers to running artificial intelligence models directly on edge devices, processing data locally rather than relying on the cloud. These models are optimized for real-time decision-making in resource-constrained environments, and include devices such as microcontrollers, embedded systems, and IoT sensors.
 
-**TinyML (Tiny Machine Learning)** is a subset of Edge AI that focuses specifically on deploying machine learning models on ultra-low-power microcontrollers and resource-constrained devices. These microcontrollers typically have limited computational resources, which is often less than 1 MB of flash memory and only a few hundred kilobytes of RAM, and are designed to run on minimal power - sometimes for years on a single coin-cell battery. 
+**TinyML (Tiny Machine Learning)** is a subset of Edge AI focused on deploying ML models on ultra-low-power devices. These devices typically operate with less than 1 MB of flash memory, a few hundred kilobytes of RAM, and can run on minimal power - sometimes for years on a single coin-cell battery. 
 
-Despite these constraints, TinyML enables such devices to perform on-device inference, allowing them to make intelligent decisions in real time without relying on resources in the cloud. This creates opportunities for smart functionality in low-cost, battery-powered devices used in applications such as environmental monitoring, wearables, smart homes, and industrial sensors.
+Despite these constraints, TinyML enables local inference, allowing devices to make intelligent decisions in real time without relying on resources in the cloud. This creates opportunities for smart functionality in low-cost, battery-powered devices used in applications such as environmental monitoring, wearables, smart homes, and industrial sensors.
 
 ## Key Characteristics of Edge AI and TinyML
 
@@ -23,19 +23,19 @@ Key features of Edge AI and TinyML include:
 
 - **Small Model Size**: the models are optimized (for example, quantized or pruned) to fit into a few kilobytes or megabytes.
 
-- **Limited Compute & Memory**: Typically operates with <1MB RAM and very limited storage.
+- **Limited Compute & Memory**: Typically operates with <1MB RAM and limited storage.
 
-- **Real-Time Inference**: Enables immediate local decision-making (e.g., wake-word detection).
+- **Real-Time Inference**: Delivers immediate local decision-making, such as wake-word detection.
 
-- **Low Latency**: No reliance on cloud – inference is performed on-device.
+- **Low Latency**: No dependency on cloud connectivity for decision-making.
 
-- **Applications**: Often used in audio classification, gesture detection, anomaly detection, etc.
+- **Practical applications**: Used in audio classification, gesture detection, and anomaly detection.
 
-- **Example Devices**: Arduino Nano 33 BLE Sense, STM32 MCUs, Raspberry Pi Pico, and Arduino Nano RP2040 Connect.
+- **Example Devices**: Arduino Nano RP2040 Connect, Arduino Nano 33 BLE Sense, STM32, and Raspberry Pi Pico.
 
-## Running AI Models on Resource-Constrained Devices
+## How AI runs on edge devices
 
-Running AI on edge devices presents several challenges. These devices often lack high-performance CPUs or GPUs, making computational power a limiting factor. Limited RAM and storage require careful memory management, and since many edge devices run on batteries, energy efficiency is a critical concern. To overcome these constraints, models are optimized through techniques such as quantization, pruning, and knowledge distillation, which reduce model size while maintaining accuracy.
+Running AI on embdeed devices presents several challenges. These systems often lack GPUs or powerful CPUs, which limits processing capabilities. Limited RAM and storage require careful memory management, and since many edge devices run on batteries, energy efficiency is a critical concern. To overcome these constraints, models are optimized through techniques such as quantization, pruning, and knowledge distillation, which reduce model size while maintaining accuracy.
 
 ## Edge AI Implementation Workflow
 

@@ -3,19 +3,19 @@ title: Learn How to Run AI on Edge Devices- Arduino Nano RP2040
 
 minutes_to_complete: 90
 
-who_is_this_for: This is an introductory topic for beginners in Edge AI and TinyML, including developers, engineers, hobbyists, AI/ML enthusiasts, and researchers working with embedded AI and IoT.
+who_is_this_for: This is a beginner-friendly topic for  developers, engineers, hobbyists, AI/ML enthusiasts, and researchers who are new to Edge AI and TinyML. It is ideal for anyone working with embedded AI or IoT applications.
 
 learning_objectives:
-    - Understand Edge AI and TinyML basics.
+    - Describe the fundamentals of Edge AI and TinyML.
     - Collect and preprocess audio data using Edge Impulse.
-    - Train and deploy an audio classification model on Arduino Nano RP2040.
-    - Interface with LEDs to switch them on and off.
+    - Train and deploy an audio classification model on Arduino Nano RP2040 Connect.
+    - Control LEDs using audio input and model inference.
 
 prerequisites:
-    - Explore this [learning path](https://learn.arm.com/learning-paths/embedded-and-microcontrollers/arduino-pico/) if you are an absolute beginner.
-    - An [Edge Impulse](https://edgeimpulse.com/) Studio account.
+    - Completion of the [Arduino Pico Learning Path](https://learn.arm.com/learning-paths/embedded-and-microcontrollers/arduino-pico/) if you are a beginner
+    - An [Edge Impulse](https://edgeimpulse.com/) Studio account
     - The [Arduino IDE with the RP2040 board support package](https://learn.arm.com/install-guides/arduino-pico/) installed on your computer
-    - An Arduino Nano RP2040 Connect [board](https://store.arduino.cc/products/arduino-nano-rp2040-connect-with-headers?_gl=1*9t4cti*_up*MQ..*_ga*NTA1NTQwNzgxLjE3NDYwMjIyODk.*_ga_NEXN8H46L5*MTc0NjAyMjI4Ny4xLjEuMTc0NjAyMjMxOC4wLjAuMjA3MjA2NTUzMA..).
+    - An Arduino Nano RP2040 Connect [board](https://store.arduino.cc/products/arduino-nano-rp2040-connect-with-headers?_gl=1*9t4cti*_up*MQ..*_ga*NTA1NTQwNzgxLjE3NDYwMjIyODk.*_ga_NEXN8H46L5*MTc0NjAyMjI4Ny4xLjEuMTc0NjAyMjMxOC4wLjAuMjA3MjA2NTUzMA..)
 
 author: Bright Edudzi Gershon Kordorwu
 ### Tags
