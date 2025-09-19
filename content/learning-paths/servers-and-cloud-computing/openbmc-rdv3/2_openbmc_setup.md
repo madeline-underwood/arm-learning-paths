@@ -23,7 +23,15 @@ sudo apt update
 sudo apt install -y git gcc g++ make file wget gawk diffstat bzip2 cpio chrpath zstd lz4 bzip2 unzip xz-utils python3
 ```
 
-Now install Docker: 
+Now install Docker:
+
+```bash
+curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+sudo usermod -aG docker $USER ; newgrp docker
+```
+See the [Docker Install Guide](/install-guides/docker) for support.
+
+Then install the `repo` tool:  
 
 ```bash
 mkdir -p ~/.bin
@@ -31,12 +39,6 @@ PATH="${HOME}/.bin:${PATH}"
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
 chmod a+rx ~/.bin/repo
 ```
-{{% notice Note %}}
-See the [Docker Install Guide](/install-guides/docker) for support.
-{{% /notice %}}
-
-
-
 ## Download and install the Arm FVP (RD-V3 r1)
 
 ```bash
