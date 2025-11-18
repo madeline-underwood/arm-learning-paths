@@ -6,7 +6,7 @@ minutes_to_complete: 60
 who_is_this_for: This is an introductory topic for developers interested in building and optimizing vLLM for Arm-based servers. This Learning Path shows you how to quantize large language models (LLMs) to INT4, serve them efficiently using an OpenAI-compatible API, and benchmark model accuracy with the LM Evaluation Harness.
 
 learning_objectives:
-    - Build an optimized vLLM for aarch64 with oneDNN and the Arm Compute Library(ACL)
+    - Build an optimized vLLM for aarch64 with oneDNN and the Arm Compute Library (ACL)
     - Set up all runtime dependencies including PyTorch, llmcompressor, and Arm-optimized libraries
     - Quantize an LLM (DeepSeek‑V2‑Lite) to 4-bit integer (INT4) precision
     - Run and serve both quantized and BF16 (non-quantized) variants using vLLM

@@ -125,7 +125,7 @@ This validates multi‑request behavior and shows aggregate throughput in the se
 (APIServer pid=4474) INFO:     127.0.0.1:44120 - "POST /v1/chat/completions HTTP/1.1" 200 OK
 (APIServer pid=4474) INFO 11-10 01:01:06 [loggers.py:221] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 57.5 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
 ```
-## Serve a BF16 (Non-Quantized) Model (optional)
+## Serve a BF16 (non-quantized) model (optional)
 
 For a non-quantized path, vLLM on Arm can run BF16 end-to-end using its oneDNN integration (which routes to Arm-optimized kernels using ACL under aarch64).
 
@@ -136,7 +136,7 @@ vllm serve deepseek-ai/DeepSeek-V2-Lite \
 ```
 Use this BF16 setup to establish a quality reference baseline, then compare throughput and latency against your INT4 deployment to quantify the performance/accuracy trade-offs on your Arm system.
 
-## Go Beyond: Power Up Your vLLM Workflow
+## Go beyond: power up your vLLM workflow
 Now that you’ve successfully quantized, served, and benchmarked a model using vLLM on Arm, you can build on what you’ve learned to push performance, scalability, and usability even further.
 
 ## Try different models

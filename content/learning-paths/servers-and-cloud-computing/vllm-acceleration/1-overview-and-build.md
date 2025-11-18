@@ -10,14 +10,14 @@ layout: learningpathall
 
 vLLM is an open-source, high-throughput inference and serving engine for large language models (LLMs). It’s designed to make LLM inference faster, more memory-efficient, and scalable, particularly during the prefill (context processing) and decode (token generation) phases of inference.
 
-## Key Features
-* Continuous batching: dynamically merges incoming inference requests into larger batches, maximizing Arm CPU utilization and overall throughput.
-* KV Cache Management: efficiently stores and reuses key-value attention states, sustaining concurrency across multiple active sessions while minimizing memory overhead.
-* Token Streaming: streams generated tokens as they are produced, enabling real-time responses for chat or API scenarios.
-## Interaction Modes
+## Key features
+* Continuous batching: dynamically merges incoming inference requests into larger batches, maximizing Arm CPU utilization and overall throughput
+* KV cache management: efficiently stores and reuses key-value attention states, sustaining concurrency across multiple active sessions while minimizing memory overhead
+* Token streaming: streams generated tokens as they are produced, enabling real-time responses for chat or API scenarios
+## Interaction modes
 You can use vLLM in two main ways:
-- Using an OpenAI-Compatible REST Server: vLLM provides a /v1/chat/completions endpoint compatible with the OpenAI API schema, making it drop-in ready for tools like LangChain, LlamaIndex, and the official OpenAI Python SDK.
-- Using a Python API: load and serve models programmatically within your own Python scripts for flexible local inference and evaluation.
+- Using an OpenAI-Compatible REST Server: vLLM provides a /v1/chat/completions endpoint compatible with the OpenAI API schema, making it drop-in ready for tools like LangChain, LlamaIndex, and the official OpenAI Python SDK
+- Using a Python API: load and serve models programmatically within your own Python scripts for flexible local inference and evaluation
 
 vLLM supports Hugging Face Transformer models out-of-the-box and scales seamlessly from single-prompt testing to production batch inference.
 
@@ -58,7 +58,7 @@ Before you begin, make sure your environment meets these requirements:
 
 This Learning Path was tested on an AWS Graviton4 c8g.12xlarge instance with 64 GB of attached storage.
 
-## Install Build Dependencies
+## Install build dependencies
 
 Install the following packages required for compiling vLLM and its dependencies on Arm64:
 ```bash
@@ -90,7 +90,7 @@ source vllm_env/bin/activate
 python3 -m pip install --upgrade pip
 ```
 
-### Clone vLLM and Install Build Requirements
+### Clone vLLM and install build requirements
 Download the official vLLM source code and install its CPU-specific build dependencies:
 
 ```bash
