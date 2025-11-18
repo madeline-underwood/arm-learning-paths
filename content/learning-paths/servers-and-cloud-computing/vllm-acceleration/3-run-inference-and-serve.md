@@ -142,12 +142,12 @@ Now that you’ve successfully quantized, served, and benchmarked a model using 
 ## Try different models
 Explore other Hugging Face models that work well with vLLM and take advantage of Arm acceleration:
 
-- **Meta Llama 2 / Llama 3:** Versatile models for general tasks. Use them to compare BF16 and INT4 performance.
-- **Qwen / Qwen-Chat:** Multilingual and instruction-tuned models for high-quality results.
-- **Gemma (Google):** Compact and efficient, making it a great choice for edge devices or cost-sensitive deployments.
+- Meta Llama 2 and Llama 3: these versatile models work well for general tasks, and you can try them to compare BF16 and INT4 performance
+- Qwen and Qwen-Chat: these models support multiple languages and are tuned for instructions, giving you high-quality results
+- Gemma (Google): this compact and efficient model is a good choice for edge devices or deployments where cost matters
 
-You can quantize and serve them using the same `quantize_vllm_models.py` recipe, just update the model name in the script.
+You can quantize and serve any of these models using the same `quantize_vllm_models.py` script. Just update the model name in the script.
 
-**Connect a chat client:**  Link your server with OpenAI-compatible UIs like [Open WebUI](https://github.com/open-webui/open-webui)
+You can also try connecting a chat client by linking your server with OpenAI-compatible user interfaces such as [Open WebUI](https://github.com/open-webui/open-webui).
 
-You can continue exploring how Arm’s efficiency, oneDNN+ACL acceleration, and vLLM’s dynamic batching combine to deliver fast, sustainable, and scalable AI inference on modern Arm architectures.
+Continue exploring how Arm efficiency, oneDNN and ACL acceleration, and vLLM dynamic batching work together to provide fast, sustainable, and scalable AI inference on modern Arm architectures.

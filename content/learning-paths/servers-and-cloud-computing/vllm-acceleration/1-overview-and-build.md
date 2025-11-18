@@ -81,7 +81,7 @@ This ensures optimized Arm kernels are used for matrix multiplications, layer no
 ## Build vLLM for Arm64 CPU
 You’ll now build vLLM optimized for Arm (aarch64) servers with oneDNN and the Arm Compute Library (ACL) automatically enabled in the CPU backend.
 
-### Create and activate a Python virtual environment
+## Create and activate a Python virtual environment
 It’s best practice to build vLLM inside an isolated environment to prevent conflicts between system and project dependencies:
 
 ```bash
@@ -90,7 +90,7 @@ source vllm_env/bin/activate
 python3 -m pip install --upgrade pip
 ```
 
-### Clone vLLM and install build requirements
+## Clone vLLM and install build requirements
 Download the official vLLM source code and install its CPU-specific build dependencies:
 
 ```bash
@@ -101,7 +101,7 @@ pip install -r requirements/cpu.txt -r requirements/cpu-build.txt
 ```
 The specific commit (5fb4137) pins a verified version of vLLM that officially adds Arm CPUs to the list of supported build targets, ensuring full compatibility and optimized performance for Arm-based systems.
 
-### Build the vLLM wheel for CPU
+## Build the vLLM wheel for CPU
 Run the following command to compile and package vLLM as a Python wheel optimized for CPU inference:
 
 ```bash
@@ -109,7 +109,7 @@ VLLM_TARGET_DEVICE=cpu python3 setup.py bdist_wheel
 ```
 The output wheel will appear under dist/ and include all compiled C++/PyBind modules.
 
-### Install the wheel
+## Install the wheel
 Install the freshly built wheel into your active environment:
 
 ```bash

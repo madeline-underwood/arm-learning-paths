@@ -1,5 +1,5 @@
 ---
-title: Accelerate vLLM inference on Arm-based Azure Cobalt 100 virtual machines
+title: Accelerate vLLM inference on Azure Cobalt 100 virtual machines
     
 minutes_to_complete: 60
 
