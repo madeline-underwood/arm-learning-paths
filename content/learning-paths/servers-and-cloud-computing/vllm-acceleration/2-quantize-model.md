@@ -5,7 +5,7 @@ weight: 3
 ### FIXED, DO NOT MODIFY
 layout: learningpathall
 ---
-## Accelerating LLMs with 4-bit Quantization
+## Accelerate LLMs with 4-bit Quantization
 
 You can accelerate many LLMs on Arm CPUs with 4‑bit quantization. In this section, you’ll quantize the deepseek-ai/DeepSeek-V2-Lite model to 4-bit integer (INT4) weights.
 The quantized model runs efficiently through vLLM’s INT4 inference path, which is accelerated by Arm KleidiAI microkernels.
@@ -35,7 +35,7 @@ If the model you plan to quantize is gated on Hugging Face (e.g., DeepSeek or pr
 huggingface-cli login
 ```
 
-## INT4 Quantization Recipe
+## Apply the INT4 quantization recipe
 
 Using a file editor of your choice, save the following code into a file named `quantize_vllm_models.py`:
 
