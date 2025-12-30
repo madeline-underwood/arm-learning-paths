@@ -1,42 +1,29 @@
 ---
-title: RabbitMQ Use Case 1 – Event Processing with Python Workers
+title: Process events with Python workers
 weight: 7
 
 ### FIXED, DO NOT MODIFY
 layout: learningpathall
 ---
 
-## RabbitMQ Use Case – Event Processing with Python Workers
 This use case demonstrates how RabbitMQ enables event-driven architectures using topic exchanges, durable queues, and Python-based worker consumers. It focuses on reliable, asynchronous event processing, which is a common production pattern.
 
-- Topic exchange–based routing
+You will implement:
+
+- Topic exchange-based routing
 - Durable queues and bindings
 - A Python-based worker using the `pika` client
 - Message publishing and consumption validation
 
-The use case models an **event-driven system**, where order-related events are published and processed asynchronously by workers.
+## Use case overview
 
-### Use case overview
+In this scenario, an application publishes order-related events (such as `order.created`, `order.updated`, and `order.completed`) to RabbitMQ. A background worker consumes these events from a queue and processes them independently.
 
-**Scenario:**  
-An application publishes order-related events (`order.created`, `order.updated`, etc.) to RabbitMQ. A background worker consumes these events from a queue and processes them independently.
+This architecture improves scalability, fault tolerance, and system decoupling by separating producers from consumers. The goal is to showcase how order-related events can be published to RabbitMQ and processed asynchronously by background workers without tightly coupling producers and consumers.
 
-The goal of this use case is to showcase how order-related events can be published to RabbitMQ and processed asynchronously by background workers without tightly coupling producers and consumers.
+## Prerequisites
 
-**Typical events include:**
-
-- order.created
-- order.updated
-- order.completed
-
-This architecture improves scalability, fault tolerance, and system decoupling.
-
-### Prerequisites
-
-- RabbitMQ installed and running
-- RabbitMQ management plugin enabled
-- Python 3 installed
-- Network access to RabbitMQ broker
+Before starting this use case, ensure you have RabbitMQ installed and running with the management plugin enabled. You also need Python 3 installed and network access to the RabbitMQ broker.
 
 ### Declare a topic exchange
 Create a durable topic exchange to route events based on routing keys.
@@ -45,9 +32,7 @@ Create a durable topic exchange to route events based on routing keys.
 ./rabbitmqadmin declare exchange name=events type=topic durable=true
 ```
 
-- Creates a durable topic exchange named events.
-- Routes messages using wildcard-based routing keys (for example, order.*).
-- Ensures the exchange survives broker restarts.
+This creates a durable topic exchange named `events` that routes messages using wildcard-based routing keys (for example, `order.*`). The exchange survives broker restarts.
 
 ### Declare a durable queue
 Create a durable queue to store order-related events.
@@ -56,9 +41,7 @@ Create a durable queue to store order-related events.
 ./rabbitmqadmin declare queue name=order.events durable=true
 ```
 
-- Create a durable queue for order events.
-- Guarantee that messages are persisted until consumed.
-- Ensure reliability in case of worker or broker restarts.
+This creates a durable queue for order events that guarantees messages are persisted until consumed, ensuring reliability in case of worker or broker restarts.
 
 You should see an output similar to:
 ```output
@@ -72,19 +55,14 @@ Bind the queue to the exchange using a topic routing pattern.
 ./rabbitmqadmin declare binding source=events destination=order.events routing_key="order.*"
 ```
 
-- Connects the queue to the exchange.
-- Ensures all order-related routing keys match the queue.
-- Enables flexible event expansion without changing consumers.
+This connects the queue to the exchange and ensures all order-related routing keys match the queue, enabling flexible event expansion without changing consumers.
 
 You should see an output similar to:
 ```output
 binding declared
 ```
 
-This binding ensures the queue receives all messages with routing keys such as:
-- order.created
-- order.updated
-- order.completed
+This binding ensures the queue receives all messages with routing keys such as `order.created`, `order.updated`, and `order.completed`.
 
 ### Publish an event message
 Publish a sample order event to the exchange.
@@ -93,9 +71,7 @@ Publish a sample order event to the exchange.
 ./rabbitmqadmin publish exchange=events routing_key="order.created" payload='{"order_id":123}'
 ```
 
-- Publishes an event to the events exchange.
-- Uses a routing key that matches the binding filter.
-- Payload is structured JSON to simulate real event data.
+This publishes an event to the `events` exchange using a routing key that matches the binding filter. The payload is structured JSON to simulate real event data.
 
 You should see an output similar to:
 ```output
@@ -113,9 +89,9 @@ pip install pika
 ### Create the worker script
 Create a Python worker file to process messages from a queue.
 
-A **Python worker** was created to process messages from a RabbitMQ queue (jobs) using the pika library. The queue is durable, ensuring message persistence. The worker implements fair dispatch (prefetch_count=1) and manual acknowledgments to reliably process each job without loss. Messages were successfully published to the queue using rabbitmqadmin, and the worker consumed them as expected.
+The Python worker processes messages from a RabbitMQ queue (`jobs`) using the `pika` library. The queue is durable, ensuring message persistence. The worker implements fair dispatch (`prefetch_count=1`) and manual acknowledgments to reliably process each job without loss.
 
-Using your favorite editor (the example uses "edit") create your "worker.py" file:
+Using your favorite editor (the example uses `vi`), create your `worker.py` file:
 
 ```console
 edit worker.py
@@ -197,16 +173,13 @@ Publish another job:
 **Worker output:**
 
 ```output
-Worker started. Waiting for jobs...
 [Worker] Received job: {'job': 'hello1'}
 ```
-Press "CTRL-C" to exit the worker application.
+
+Press Ctrl+C to exit the worker application.
 
 ## Use case validation
 
-- Event routing via topic exchanges functions correctly  
-- Durable queues and acknowledgments ensure reliable message processing  
-- Worker-based consumption supports safe and controlled job execution
+You have successfully implemented an event-driven system using RabbitMQ. Event routing via topic exchanges functions correctly, durable queues and acknowledgments ensure reliable message processing, and worker-based consumption supports safe and controlled job execution.
 
-This use case demonstrates how RabbitMQ enables reliable, decoupled, and scalable event processing using topic-based routing and Python workers.
-The setup provides a strong foundation for production-grade, message-driven architectures on GCP SUSE Arm64 virtual machines.
+This setup provides a strong foundation for production-grade, message-driven architectures on GCP SUSE Arm64 virtual machines.

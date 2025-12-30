@@ -1,19 +1,15 @@
 ---
-title: Deploy RabbitMQ on Google Cloud C4A (Arm-based Axion VMs)
-
-draft: true
-cascade:
-    draft: true
+title: Deploy RabbitMQ on Google Axion C4A virtual machines
 
 minutes_to_complete: 30
 
-who_is_this_for: This is an introductory topic for software engineers and platform engineers migrating messaging and event-driven workloads from x86_64 to Arm-based servers, specifically on Google Cloud C4A virtual machines powered by Axion processors.
+who_is_this_for: This is an introductory topic for Software and platform engineers deploying or migrating messaging workloads to Arm-based servers on Google Cloud using Axion C4A virtual machines.
 
 learning_objectives:
   - Provision an Arm-based SUSE SLES virtual machine on Google Cloud (C4A with Axion processors)
   - Install and configure RabbitMQ on a SUSE Arm64 (C4A) instance
   - Validate RabbitMQ deployment using baseline messaging tests
-  - Implement real-world RabbitMQ use cases such as event-driven processing and notification pipelines
+  - Demonstrate simple RabbitMQ use cases such as event-driven message processing and notifications
 
 prerequisites:
   - A [Google Cloud Platform (GCP)](https://cloud.google.com/free) account with billing enabled
@@ -24,7 +20,7 @@ author: Pareena Verma
 
 ##### Tags
 skilllevels: Introductory
-subjects: Databases
+subjects: Containers and Virtualization
 cloud_service_providers: Google Cloud
 
 armips:

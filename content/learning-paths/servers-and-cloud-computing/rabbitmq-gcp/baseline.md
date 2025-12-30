@@ -1,28 +1,30 @@
 ---
-title: RabbitMQ Baseline Testing on Google Axion C4A Arm Virtual Machine
+title: Validate RabbitMQ baseline testing on Google Axion C4A
 weight: 6
 
 ### FIXED, DO NOT MODIFY
 layout: learningpathall
 ---
 
-## RabbitMQ Baseline Validation on GCP SUSE Arm64 VM
-This document defines a **baseline validation procedure** for RabbitMQ installed on a **Google Cloud SUSE Linux Arm64 virtual machine**.  
-The purpose of this baseline is to confirm:
+After installing RabbitMQ on your Google Cloud SUSE Linux Arm64 virtual machine, you need to validate that it's working correctly.
+
+This baseline validation confirms:
 
 - RabbitMQ service health
 - Management plugin availability
 - Queue operations (create, publish, consume)
 - CLI tooling functionality (`rabbitmqctl` and `rabbitmqadmin`)
 
-### Check RabbitMQ node status
+## Check RabbitMQ node status
 Verify that the RabbitMQ node is operational and healthy.
 
 ```console
 sudo rabbitmqctl status
 ```
+
+The command output should confirm that:
 - Node status reports RabbitMQ is running
-- No active alarms
+- No active alarms are present
 - Listeners are active on ports 5672 and 15672
 - Memory and disk space are within safe limits
 
@@ -58,18 +60,19 @@ Interface: [::], port: 25672, protocol: clustering, purpose: inter-node and CLI 
 Interface: [::], port: 5672, protocol: amqp, purpose: AMQP 0-9-1 and AMQP 1.0
 ```
 
-### Download RabbitMQ Admin CLI tool
-Download the rabbitmqadmin CLI tool from the local management endpoint.
+## Download RabbitMQ Admin CLI tool
+Download the `rabbitmqadmin` CLI tool from the local management endpoint.
 
 ```console
 curl -u guest:guest http://localhost:15672/cli/rabbitmqadmin -o rabbitmqadmin
 ```
-**Make the tool executable:**
+
+Make the tool executable:
 
 ```console
 chmod +x rabbitmqadmin
 ```
-### Validate queue creation
+## Validate queue creation
 Create a test queue to validate write operations.
 
 ```console
@@ -81,7 +84,7 @@ You should see an output similar to:
 queue declared
 ```
 
-### Publish a test message
+## Publish a test message
 Send a test message to the queue.
 
 ```console
@@ -93,7 +96,7 @@ You should see an output similar to:
 Message published
 ```
 
-### Consume message from queue
+## Consume message from queue
 Retrieve messages from the queue to verify read functionality.
 
 ```console
@@ -109,7 +112,7 @@ You should see an output similar to:
 +-------------+----------+---------------+-------------+---------------+------------------+------------+-------------+
 ```
 
-### Verify queue state
+## Verify queue state
 Confirm that the queue is empty after consumption.
 
 ```console
@@ -126,13 +129,4 @@ You should see an output similar to:
 | testqueue    | 1        |
 ```
 
-### Baseline validation summary
-
-- RabbitMQ node is running and healthy
-- The management plugin is enabled and accessible
-- Queue creation is successful
-- Message publishing works as expected
-- Message consumption functions correctly
-- CLI tools operate without error
-
-This confirms a successful baseline validation of RabbitMQ on a GCP SUSE Arm64 virtual machine.
+You have successfully validated RabbitMQ on your GCP SUSE Arm64 virtual machine. The node is running and healthy, the management plugin is enabled and accessible, and queue operations (creation, publishing, consumption) work correctly.

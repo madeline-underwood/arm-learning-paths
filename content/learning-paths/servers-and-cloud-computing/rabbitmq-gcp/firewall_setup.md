@@ -1,5 +1,5 @@
 ---
-title: Create a Firewall Rule on GCP
+title: Create a firewall rule on GCP
 weight: 3
 
 ### FIXED, DO NOT MODIFY
@@ -8,22 +8,22 @@ layout: learningpathall
 
 ## Overview
 
-In this section, you create a Firewall Rule within Google Cloud Console to expose TCP port 15672.
+In this section, you create a firewall rule in Google Cloud to allow access to the RabbitMQ management interface on TCP port 15672.
+
+Before creating the virtual machine, you need to configure a firewall rule to allow access to the RabbitMQ management interface on TCP port 15672.
 
 {{% notice Note %}}
 For support on GCP setup, see the Learning Path [Getting started with Google Cloud Platform](/learning-paths/servers-and-cloud-computing/csp/google/).
 {{% /notice %}}
 
-## Create a Firewall Rule in GCP
-
-To expose TCP port 15672, create a firewall rule.
+## Create a firewall rule in GCP
 
 Navigate to the [Google Cloud Console](https://console.cloud.google.com/), go to **VPC Network > Firewall**, and select **Create firewall rule**.
 
 ![Create a firewall rule](images/firewall-rule.png "Create a firewall rule")
 
 Next, create the firewall rule that exposes TCP port 15672.
-Set the **Name** of the new rule to "allow-tcp-15672". Select your network that you intend to bind to your VM (default is "autoscaling-net" but your organization might have others).
+Set the **Name** of the new rule to "allow-tcp-15672". Select your network that you intend to bind to your VM (default is "autoscaling-net", but your organization might have others).
 
 Set **Direction of traffic** to "Ingress". Set **Allow on match** to "Allow" and **Targets** to "Specified target tags". Enter "allow-tcp-15672" in the **Target tags** text field. Set **Source IPv4 ranges** to "0.0.0.0/0".
 

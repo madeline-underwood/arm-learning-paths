@@ -7,7 +7,7 @@ layout: learningpathall
 ---
 
 ## Install RabbitMQ on GCP SUSE Arm64 VM
-This guide describes a **step-by-step installation of RabbitMQ** on a **Google Cloud Platform SUSE Linux Arm64 virtual machine**, using **RPM packages** for both **Erlang** and **RabbitMQ Server**.
+This guide describes a step-by-step installation of RabbitMQ on a Google Cloud Platform SUSE Linux Arm64 virtual machine, using RPM packages for both Erlang and RabbitMQ Server.
 
 RabbitMQ needs Erlang to be installed before setting up the server.
 
@@ -19,21 +19,21 @@ RabbitMQ needs Erlang to be installed before setting up the server.
 - Outbound internet access
 
 ### Refresh system repositories
-This step updates the system’s package list so the operating system knows about the latest software available from its repositories.
+Update the system's package list so the operating system recognizes the latest software available from its repositories.
 
 ```console
 sudo zypper refresh
 ```
 
 ### Install required system utilities
-You can install the basic tools needed to download and manage packages.
+Install the basic tools needed to download and manage packages.
 
 ```console
 sudo zypper install -y curl wget gnupg tar socat logrotate
 ```
 
 ### Download Erlang RPM (Arm64)
-RabbitMQ depends on Erlang. Download the Erlang RPM compatible with the Arm64 architecture.
+RabbitMQ depends on Erlang. Download the Erlang RPM package compatible with the Arm64 architecture.
 
 ```console
 wget https://github.com/rabbitmq/erlang-rpm/releases/download/v26.2.5/erlang-26.2.5-1.el8.aarch64.rpm
@@ -62,8 +62,8 @@ sudo rpm -Uvh rabbitmq-server-4.2.0-1.el8.noarch.rpm
 ```
 
 {{% notice Note %}}
-RabbitMQ version 3.11.0 introduced significant performance enhancements for Arm-based architectures. This version needs Erlang 25.0 or later, which brings Just-In-Time (JIT) compilation and modern flame graph profiling tooling to both x86 and Arm64 CPUs. These features result in improved performance on Arm64 architectures.
-You can view [this release note](https://github.com/rabbitmq/rabbitmq-server/blob/main/release-notes/3.11.0.md)
+RabbitMQ version 3.11.0 introduced significant performance enhancements for Arm-based architectures. This version requires Erlang 25.0 or later, which brings Just-In-Time (JIT) compilation and modern flame graph profiling tooling to both x86 and Arm64 CPUs. These features result in improved performance on Arm64 architectures.
+You can view [this release note](https://github.com/rabbitmq/rabbitmq-server/blob/main/release-notes/3.11.0.md).
 
 The [Arm Ecosystem Dashboard](https://developer.arm.com/ecosystem-dashboard/) recommends RabbitMQ version 3.11.0, the minimum recommended on Arm platforms.
 {{% /notice %}}
@@ -134,6 +134,6 @@ Replace `<VM_IP>` with the public IP of your GCP VM.
 
 If everything is configured correctly, you see a RabbitMQ login page in your browser that looks like this:
 
-![RabbitMQ page alt-text#center](images/rabbitmq.png "Figure 1: RabbitMQ Login page")
+![RabbitMQ management UI login page showing username and password fields#center](images/rabbitmq.png "RabbitMQ Login page")
 
 This confirms that your RabbitMQ management dashboard is operational.
