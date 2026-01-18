@@ -30,13 +30,9 @@ Where it is used:
 <meta name="x-desc-debug" content="{{ printf "%q" .Params.description }}">
 
 {{/* Meta description */}}
-{{- $d := "" -}}
-{{- with .Params.description -}}
-  {{- $d = . -}}
-{{- end -}}
-{{- $d = $d | plainify | htmlEscape | trim " \t\r\n" -}}
+{{- $d := .Params.description | default "" | plainify | htmlEscape | strings.TrimSpace -}}
 {{- if gt (len $d) 0 -}}
-  <meta name="description" content="{{ $d }}">
+<meta name="description" content="{{ $d }}">
 {{- end -}}
 
 {{ partial "head/jsonld.html" . }}
