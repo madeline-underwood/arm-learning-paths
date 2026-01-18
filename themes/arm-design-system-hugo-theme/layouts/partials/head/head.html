@@ -26,6 +26,8 @@ Where it is used:
 <link rel="canonical" href="https://learn.arm.com{{ .Permalink }}" />
 <title>{{ $title }}</title>
 
+<meta name="x-head-test" content="HEAD_PARTIAL_ACTIVE_TEST">
+
 {{/* Meta description: short, task-oriented summary for SERP and AI selection.
      This is intentionally distinct from the JSON-LD description. */}}
 {{- with .Params.description -}}
