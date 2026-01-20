@@ -29,7 +29,7 @@ my-nginx/
 
 ### Clean templates
 
-The default Helm chart includes several files that aren't required for a basic Nginx deployment. Remove the following files from `my-nginx/templates/` to avoid unnecessary complexity and template errors: ingress.yaml, hpa.yaml, serviceaccount.yaml, tests/, NOTES.txt, and httproute.yaml.
+The default Helm chart includes several files that aren't required for a basic NGINX deployment. Remove the following files from `my-nginx/templates/` to avoid unnecessary complexity and template errors: ingress.yaml, hpa.yaml, serviceaccount.yaml, tests/, NOTES.txt, and httproute.yaml.
 
 ```console
 cd ./my-nginx/templates
@@ -145,7 +145,7 @@ http://<EXTERNAL-IP>
 
 You should see the default NGINX welcome page:
 
-![NGINX default welcome page displayed in a web browser showing the welcome message and basic NGINX information#center](images/nginx-browser.png "NGINX welcome page")
+![NGINX default welcome page displayed in a web browser showing the welcome message and basic NGINX information alt-txt#center](images/nginx-browser.png "NGINX welcome page")
 
 ## What you've accomplished and what's next
 
