@@ -8,11 +8,11 @@ weight: 2 # 1 is first, 2 is second, etc.
 layout: "learningpathall"
 ---
 
-You can prepare a Docker image containing [Arm Compiler for Embedded](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded) and a library of [Fixed Virtual Platforms (FVPs)](https://developer.arm.com/Tools%20and%20Software/Fixed%20Virtual%20Platforms), for use as a basic build and run environment.
+You can prepare a Docker image containing [Arm Compiler for Embedded](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded) and a library of [Fixed Virtual Platforms (FVPs)](https://developer.arm.com/Tools%20and%20Software/Fixed%20Virtual%20Platforms) for use as a basic build and run environment.
 
-The operating system of the docker image is `Ubuntu`, though the host machine could be Windows or a different flavor of Linux.
+The Docker image uses `Ubuntu` as the operating system, though your host machine can run Windows or a different flavor of Linux.
 
-Linux users may need to precede the `docker` commands below with `sudo`, as the docker daemon always runs as the root user.
+Linux users may need to precede the `docker` commands below with `sudo`, as the Docker daemon always runs as the root user.
 
 ## Before you begin
 
@@ -22,9 +22,9 @@ Download and [install](/install-guides/docker/) the appropriate version of Docke
 
 Download the installation packages for Arm Compiler for Embedded and the FVP library from the [Product Download Hub](https://developer.arm.com/downloads).
 
-Create a (temporary) directory, and copy the compiler and FVP library installers here. 
+Create a temporary directory, and copy the compiler and FVP library installers there.
 
-Note that the exact file names are dependent on the versions used - you may need to update the below `Dockerfile` as necessary.
+Note that the exact file names depend on the versions you use - you may need to update the `Dockerfile` below as necessary.
 
 ## Create Dockerfile
 
@@ -34,13 +34,13 @@ In the same directory, create a text file named exactly `Dockerfile` containing 
 
 ### Notes regarding Dockerfile
 
-This file copies the installers to the Docker image. The exact filename(s) will depend on the versions used.
+The Dockerfile copies the installers to the Docker image. The exact filenames depend on the versions you use.
 
-Edit the Dockerfile as necessary (`ACfE` and `FVP` arguments), else edit on the build command line (see later).
+Edit the Dockerfile as necessary (`ACfE` and `FVP` arguments), or edit them on the build command line (see later).
 
-While installing the [compiler](/install-guides/armclang/) and [FVP library](/install-guides/fm_fvp/fvp/), the EULA(s) are silently accepted. Be sure that this is satisfactory for you.
+While installing the [compiler](/install-guides/armclang/) and [FVP library](/install-guides/fm_fvp/fvp/), the installer silently accepts the EULAs. Be sure this is satisfactory for you.
 
-You will need to edit the licensing portion of the file to match your internal license setup. See [Arm User-Based Licenses](/install-guides/license/) for more information.
+You'll need to edit the licensing portion of the file to match your internal license setup. See [Arm User-Based Licenses](/install-guides/license/) for more information.
 
 ## Dockerfile {#dockerfile}
 ```Dockerfile
@@ -97,27 +97,37 @@ ENV PATH "/home/$USER/FVP/bin:/home/$USER/FVP/FVP_Base:/home/$USER/FVP/FVP_MPS2:
 # ENV ARMLMD_LICENSE_FILE=port@server
 ```
 ## Build docker image
-Use the command:
+
+Use the following command to build a Docker image named `arm-environment`:
+
 ```console
 docker build -t arm-environment .
 ```
-to build a docker image named `arm-environment`. This name is arbitrary, and can be changed if you wish.
 
-To change `Dockerfile` arguments from the command line, use the `--build-arg` option. For example to build an Arm-hosted docker image:
+You can change this name if you wish.
+
+To change `Dockerfile` arguments from the command line, use the `--build-arg` option. For example, to build an Arm-hosted Docker image:
 ```console
 docker build --build-arg ARCH=aarch64 --build-arg ACfE=ARMCompiler6.21_standalone_linux-aarch64.tar.gz --build-arg FVP=FVP_ARM_Std_Library_11.24_11_Linux64_armv8l.tgz -t arm-environment:aarch64 .
 ```
-After a few minutes the docker image will be built and be ready for use. You can see all available images with the command:
+
+After a few minutes the Docker image will be built and ready for use. You can see all available images with the following command:
+
 ```console
 docker images
 ```
+
 ## Access the docker image
-To interact with your docker image, enter the command:
+
+To interact with your Docker image, enter the following command:
 ```console
 docker run -i -t arm-environment /bin/bash
 ```
-and you will enter the terminal of the docker image. Verify everything is working correctly with, for example:
+
+You'll enter the terminal of the Docker image. Verify everything is working correctly with, for example:
+
 ```console
 armclang --version
 ```
-You have created a docker environment containing Arm Compiler for Embedded and the FVP library, which you can share and replicate as needed.
+
+You've created a Docker environment containing Arm Compiler for Embedded and the FVP library, which you can share and replicate as needed.
